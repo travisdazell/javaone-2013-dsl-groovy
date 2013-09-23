@@ -1,0 +1,21 @@
+// this is a DSLD file
+
+contribute(currentType(subType('java.lang.Object'))) {
+	property name : 'at', type : 'net.travisdazell.javaone.groovy.examples.TeeTime', doc : 'The date and time for the scheduled tee time, entered in the following format: d-MMM-yyyy hh:mm a. <pre>Examples of usage:<br/><br/>at "24-Sep-2013 3:07 PM"</pre>'
+}
+
+contribute(currentType(subType('net.travisdazell.javaone.groovy.examples.TeeTime'))) {
+	property name : 'forGolfer', type : 'net.travisdazell.javaone.groovy.examples.Golfer', doc : ''
+}
+
+contribute(currentType(subType(Integer))) {
+	property name : 'guests', type : Integer, doc : 'The number of additional golfers in the group <pre>Examples:<br/><br/>3.guests</pre>'
+}
+
+contribute(currentType(subType('java.lang.Object'))) {
+	property name : 'bookTeeTime', type : void, doc : 'Commits the tee time to the system'
+}
+
+contribute(currentType(subType('java.lang.Object'))) {
+	property name : 'newTeeTime', type : 'net.travisdazell.javaone.groovy.examples.TeeTime', doc : 'Creates the new tee time to be scheduled'
+}
